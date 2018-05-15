@@ -1,0 +1,305 @@
+@import "../../../common/less/common";
+@import "../../../common/less/mixin";
+
+.index {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0.8rem;
+    background-color: #fff;
+    .wxsaoico{
+        position: fixed;
+        display: block;
+        width:0.8rem;
+        text-align: center;
+        color: #333;
+        font-size:0.18rem;
+        right:0.5rem;
+        bottom:2.5rem;
+        background: url(../images/saoyisao.png) no-repeat center top;
+        background-size:0.56rem 0.56rem;
+        padding-top:0.6rem;
+    }
+    .mask {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        z-index: 999;
+    }
+    .soap {
+        //position: absolute;
+        position: fixed;
+        top:0;
+        left:0;
+        width: 100%;
+        text-align: center;;
+        background-color: #252222;
+        opacity: 0.6;
+        z-index: 1999;
+        overflow: auto;
+
+    }
+    .winning {
+        z-index: 2000;
+        position: absolute;
+        top: 24%;
+        left: 0;
+        margin: 22px auto;
+        text-align: center;
+        .closeX {
+            position: absolute;
+            top:0;
+            right: 5%;
+            width: 24px;
+            height: 24px;
+            padding: 10px;
+        }
+        .win_img {
+            width: 86%;
+        }
+        .win_kan {
+            position: absolute;
+            bottom: 9%;
+            left: 30%;
+            width: 42%;
+        }
+    }
+}
+
+.baseMes {
+    .banner {
+        height: 3.15rem;
+        border-bottom: 0.2rem solid #f1f1f1;
+
+        .bannerImg {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .username {
+        padding: 0.2rem 0;
+        position: relative;
+        margin: 0 0.3rem;
+        border-bottom: 1px solid #ddd;
+
+        .userImg {
+            width: 1.2rem;
+            height: 1.2rem;
+            box-sizing: border-box;
+            padding: 2px;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+        }
+
+        h3 {
+            font-size: 0.32rem;
+            position: absolute;
+            line-height: 0.4rem;
+            top: 0.6rem;
+            left: 1.5rem;
+        }
+
+        .messageIcon {
+            position: absolute;
+            width: 0.5rem;
+            top: 0.5rem;
+            right: 0.2rem;
+
+            img {
+                display: block;
+                width: 100%;
+            }
+
+            span {
+                position: absolute;
+                font-size: 0.2rem;
+                width: 0.3rem;
+                height: 0.3rem;
+                top: 0;
+                right: -0.1rem;
+                background-color: @mainColor;
+                color: #fff;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 0.3rem;
+            }
+        }
+    }
+
+    .score {
+        padding: 0 0.4rem;
+        line-height: 0.8rem;
+        .clearFix();
+
+        .currentScore {
+            font-weight: bold;
+            color: @mainColor;
+            float: left;
+        }
+
+        .sales {
+            float: right;
+            font-size: 0.26rem;
+        }
+    }
+
+    .saleState {
+        position: relative;
+        margin-top: 0.3rem;
+        height: 3rem;
+        padding: 0 1rem 0 3.4rem;
+
+        .progressCon {
+            position: absolute;
+            width: 1.25rem;
+            top: 0;
+            left: 1rem;
+
+            .proBg {
+                display: block;
+                width: 100%;
+            }
+
+            .progress {
+                position: absolute;
+                width: 100%;
+                height: 50%;
+                left: 0;
+                bottom: 0;
+                overflow: hidden;
+
+                img {
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                    bottom: 0;
+                }
+            }
+        }
+
+        .userRank {
+            font-size: 0.9rem;
+            text-align: center;
+            font-weight: bold;
+            line-height: 1.1rem;
+            color: @mainColor;
+        }
+
+        .rankName {
+            font-weight: bold;
+            text-align: center;
+            color: @mainColor;
+        }
+
+        .hidden {
+            opacity: 0;
+        }
+
+        .monthSale {
+            font-size: 0.2rem;
+            margin-top: 0.2rem;
+            line-height: 0.6rem;
+        }
+
+        .saleTip {
+            font-size: 0.2rem;
+            line-height: 0.3rem;
+            color: #999;
+        }
+    }
+
+    .rankTip {
+        position: absolute;
+        width: 100%;
+        top: 88%;
+        text-align: center;
+        line-height: 0.4rem;
+        font-size: 0.36rem;
+
+        .arrow {
+            width: 0.22rem;
+        }
+
+        .rankIcon {
+            height: 0.28rem;
+        }
+    }
+}
+
+.rankCon {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    padding-bottom: 1.5rem;
+
+    .title {
+        margin-top: 0.2rem;
+        font-size: 0.36rem;
+        color: @mainColor;
+        text-align: center;
+        line-height: 0.4rem;
+
+        img {
+            height: 0.28rem;
+        }
+    }
+
+    .place {
+        text-align: center;
+        color: @mainColor;
+        line-height: 1rem;
+    }
+
+    .list {
+        text-align: center;
+        width: 100%;
+        margin-top: 0.2rem;
+
+        thead {
+            font-size: 0.28rem;
+            color: @mainColor;
+        }
+
+        tbody {
+            font-size: 0.24rem;
+        }
+
+        th, td {
+            line-height: 0.75rem;
+            padding: 0 0.1rem;
+            .ellipsisNormal();
+        }
+
+        tr:nth-child(2n) {
+            background-color: #f1f1f1;
+        }
+
+        .col3, .col4 {
+            width: 1.2rem;
+        }
+
+        img {
+            display: block;
+            height: 0.5rem;
+            margin: 0.11rem auto 0 auto;
+        }
+
+        .active {
+            background-color: #e1e1e1;
+            color: @mainColor;
+        }
+    }
+}

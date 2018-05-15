@@ -1,0 +1,564 @@
+@import "../../../common/less/common";
+@import "../../../common/less/mixin";
+#scanDialog {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+#scanDialog .con {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6rem;
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+#scanDialog .dialogTitle {
+  height: 1rem;
+  line-height: 1rem;
+  background-color: #db0025;
+  text-align: center;
+  color: #fff;
+  font-size: 0.42rem;
+  border-radius: 10px 10px 0 0;
+}
+#scanDialog .dialogCon {
+  font-size: 0.3rem;
+  color: #555;
+  padding: 0.5rem;
+  line-height: 0.4rem;
+  word-break: break-all;
+  word-wrap: break-word;
+  position: relative;
+  text-align: center;
+}
+#scanDialog .dialogBtn {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+  padding: 0 0.1rem;
+  margin-bottom: 0.3rem;
+}
+#scanDialog .dialogBtn button {
+  display: block;
+  width: 2.7rem;
+  height: 0.6rem;
+  border: 1px solid #db0025;
+  line-height: 0.6rem;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 0.1rem;
+  background: none;
+}
+#scanDialog .dialogBtn .cancelBtn {
+  color: #db0025;
+}
+#scanDialog .dialogBtn .confirmBtn {
+  background-color: #db0025;
+  color: #fff;
+}
+#scanDialog .closeDialog {
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #fff;
+  line-height: 0.5rem;
+  text-align: center;
+  color: #999;
+  top: -0.1rem;
+  right: -0.1rem;
+  border-radius: 50%;
+  font-size: 0.4rem;
+}
+
+#loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  z-index: 9999;
+  display: none;
+}
+#loading .loadingTip {
+  position: absolute;
+  width: 1.6rem;
+  height: 1.6rem;
+  top: 50%;
+  left: 50%;
+  margin: -0.8rem 0 0 -0.8rem;
+}
+
+#loading .img {
+  position: absolute;
+  width: 1.6rem;
+  height: 1.6rem;
+  background:url(../images/loading.png) no-repeat;
+  background-size:100% 100%;
+  -webkit-animation: loading 2s linear infinite;
+}
+#loading span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  line-height: 1.6rem;
+  text-align: center;
+  font-size: 0.26rem;
+}
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.wxsao {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0.8rem;
+    background-color:#e7e6e4;    
+    background-image: url(../images/bg.png);
+    background-repeat:no-repeat;
+    background-size:100% auto;
+    background-position:0rem 0.9rem;
+    .TEST {
+        position: fixed;
+        right: .2rem;
+        bottom: .5rem;
+        color: #000;
+    }
+    .StartWX {
+        width: 90%;
+        background-color: #DB0025;
+        color: #fff;
+        text-align: center;
+        height: 1rem;
+        line-height: 1rem;
+        margin: 0 auto;
+        border-radius: 5px;
+        position: absolute;
+        top: 10rem;
+        left: 50%;
+        margin-left: -45%;
+    }
+    .StartCord {
+        color: #DB0025;
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        top: 11.2rem;
+    } 
+}
+
+.wxcord {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0.8rem;
+    background-color: #fff;
+    .logo {
+        width: 100%;
+        height: 4.08rem;
+        background-image: url(../images/sao_logo.png);
+        background-repeat:no-repeat;
+        background-size:100% auto;    
+        margin-top: 1.5rem;
+    }
+    .cordinput {
+        height: 1rem;
+        line-height: 1rem;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        position: absolute;
+        width: 90%;
+        left: 50%;
+        margin-left: -45%;
+        top: 8rem;
+        label {
+            float: left;
+            width: 20%;
+            font-size: .36rem;
+            font-weight: bold;
+        }
+        input {
+            width: 79%;
+            float: right;
+            height: 1rem;
+            line-height: 1rem;
+            font-size: 0.36rem;
+        }
+    }
+    .cordBtn {
+        width: 90%;
+        background-color: #DB0025;
+        color: #fff;
+        text-align: center;
+        height: 1rem;
+        line-height: 1rem;
+        margin: 0 auto;
+        border-radius: 5px;
+        position: absolute;
+        top: 9.5rem;
+        left: 50%;
+        margin-left: -45%;
+    }
+}
+
+.WxSuccess {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0.8rem;
+    background-color: #fff;
+    .sucIcon {
+        width: 1rem;
+        height: 1rem;
+        margin: 0.6rem auto 0 auto;
+        position: relative;
+        background-image: url(../images/redgou.png);
+        background-repeat:no-repeat;
+        background-size:100% 100%;         
+    }
+    .sucIcon img {
+        display: block;
+        width: 100%;
+    }
+    .sucIcon .num {
+        font-size: 0.24rem;
+        position: absolute;
+        color: #db0025;
+        top: -0.08rem;
+        left: 0.95rem;
+    }
+    .numTip {
+        text-align: center;
+        margin-top: 0.2rem;
+        font-size: 0.4rem;
+    }
+    .skuname{
+        text-align: center;
+        font-size: 0.46rem;
+        line-height: 2em;
+        color:#db0025;
+    }
+    .tip {
+        font-size: 0.26rem;
+        text-align: center;
+        line-height: 0.4rem;
+        color: #999;
+        padding: 0.2rem 0.5rem;
+    }
+    .tip2 {
+        color: #db0025;
+        font-size: 0.26rem;
+        text-align: center;
+        line-height: 0.4rem;
+        padding: 0 0.5rem;
+    }
+    .gameTip {
+        margin-top: 0.5rem;
+        border-top: 1px solid #e3e3e3;
+        border-bottom: 1px solid #e3e3e3;
+        padding: 0.25rem 0 0.25rem 1.8rem;
+        font-size: 0.26rem;
+        line-height: 0.46rem;
+        height: 0.92rem;
+        position: relative;
+    }
+    .gameTip .gameIcon {
+        width: 1.23rem;
+        height: 0.92rem;
+        position: absolute;
+        top: 0.25rem;
+        left: 0.3rem;
+        background-image: url(../images/leftico.png);
+        background-repeat:no-repeat;
+        background-size:100%; 
+    }
+    .link1 {
+        width: 3.3rem;
+        height: 0.84rem;
+        border: 1px solid #db0025;
+        line-height: 0.84rem;
+        text-align: center;
+        color: #db0025;
+        font-size: 0.34rem;
+        position: absolute;
+        left: 0.3rem;
+        bottom: 0.5rem;
+        border-radius: 0.1rem;
+    }
+    .link2 {
+        width: 3.3rem;
+        height: 0.84rem;
+        border: 1px solid #db0025;
+        line-height: 0.84rem;
+        text-align: center;
+        color: #db0025;
+        font-size: 0.34rem;
+        position: absolute;
+        right: 0.3rem;
+        bottom: 0.5rem;
+        border-radius: 0.1rem;
+    }
+    .type2 {
+        position: absolute;
+        box-sizing: border-box;
+        padding: 0 0.3rem 0.6rem 0.3rem;
+        left: 0;
+        bottom: 0;
+    }
+    .type2 .tip3 {
+        font-size: 0.24rem;
+        color: #999;
+        line-height: 0.3rem;
+    }
+    .type2 .link3 {
+        display: block;
+        height: 0.86rem;
+        box-sizing: border-box;
+        font-size: 0.34rem;
+        line-height: 0.86rem;
+        border-radius: 0.1rem;
+        background-color: #db0025;
+        text-align: center;
+        color: #fff;
+        margin-top: 0.2rem;
+    }
+    .type2 .link4 {
+        display: block;
+        height: 0.86rem;
+        box-sizing: border-box;
+        font-size: 0.34rem;
+        line-height: 0.86rem;
+        border-radius: 0.1rem;
+        text-align: center;
+        color: #db0025;
+        margin-top: 0.4rem;
+        border: 1px solid #db0025;
+    }
+}
+
+.upload {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0.8rem;
+    background-color: #fff;
+    .title {
+      font-size: 0.4rem;
+      line-height: 1.5rem;
+      text-align: center;
+      font-weight: normal;
+      border-top: 0.2rem solid #f1f1f1;
+    }    
+    .desc {
+        padding: 0 0.3rem;
+        font-size: 0.32rem;
+        line-height: 0.45rem;
+        color: #666;
+    }
+    .desc .textRed {
+        color: #db0025;
+    }
+    #fileList {
+        margin: 0 auto;
+        list-style: none;
+        width: 7.1rem;
+        padding: 0.3rem 0;
+    }
+    #fileList:before,
+    #fileList:after {
+        content: " ";
+        display: table;
+    }
+    #fileList:after {
+        clear: both;
+    }
+    #fileList li {
+        position: relative;
+        width: 21%;
+        margin: 2%;
+        float: left;
+    }
+    #fileList li .delImg {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #d9534f;
+        top: -7px;
+        right: -7px;
+        display: none;
+    }
+    #fileList li .delImg:before {
+        content: " ";
+        position: absolute;
+        width: 10px;
+        border: 1px solid #fff;
+        top: 9px;
+        left: 4px;
+    }
+    #fileList li .imgPercent {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: none;
+    }
+    #fileList #addImg {
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    #fileList #addImg:before {
+        content: " ";
+        position: absolute;
+        width: 50%;
+        border: 1px solid #ccc;
+        top: 50%;
+        margin-top: -1px;
+        left: 50%;
+        margin-left: -25%;
+    }
+    #fileList #addImg:after {
+        content: " ";
+        position: absolute;
+        width: 50%;
+        border: 1px solid #ccc;
+        top: 50%;
+        margin-top: -1px;
+        left: 50%;
+        margin-left: -25%;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+    #fileList #addImg #addImgBtn {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    #fileList .addImgHide {
+        position: absolute !important;
+        left: -1000px !important;
+    }
+    #fileList:after {
+        display: table;
+        clear: both;
+    }
+    .remarks {
+        margin: 0 0.3rem;
+        border-top: 1px solid #e3e3e3;
+        padding: 0.2rem 0;
+    }
+    .remarks span {
+        font-size: 0.3rem;
+        color: #666;
+    }
+    .remarks textarea {
+        margin-top: 0.1rem;
+        display: block;
+        width: 100%;
+        height: 2rem;
+        font-size: 0.3rem;
+        color: #666;
+        box-sizing: border-box;
+        border: 1px solid #eee;
+        border-radius: 0.1rem;
+        padding: 0.1rem;
+    }
+    #submit {
+        width: 6.9rem;
+        display: block;
+        height: 0.85rem;
+        background-color: #db0025;
+        color: #fff;
+        font-size: 0.34rem;
+        margin: 0.5rem auto;
+        border-radius: 0.1rem;
+    }
+}
+.uploadDown{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0.8rem;
+    background-color: #fff; 
+    .con {
+      padding: 0.55rem 0 0.3rem 0;
+      background-color: #fff;
+    }
+    .con .img {
+      display: block;
+      width: 1rem;
+      height: 1rem;
+        background-image: url(../images/greengou.png);
+        background-repeat:no-repeat;
+        background-size:100%; 
+      margin: 0 auto;
+    }
+    .con .title {
+      font-size: 0.4rem;
+      text-align: center;
+      line-height: 0.9rem;
+    }
+    .con .tip {
+      font-size: 0.26rem;
+      line-height: 0.5rem;
+      color: #666;
+      text-align: center;
+    }   
+}

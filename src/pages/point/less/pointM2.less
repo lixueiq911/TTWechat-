@@ -1,0 +1,169 @@
+@import "../../../common/less/common";
+@import "../../../common/less/mixin";
+
+.pointM2 {
+  background-color: #ffffff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  .header {
+    line-height: 1rem;
+    background-color: #1B1B1F;
+    position: relative;
+    height:7%;
+
+    .fa_left {
+      position: absolute;
+      width: 0.9rem;
+      top: 0;
+      right: 0;
+      line-height: 1rem;
+      text-align: center;
+      color: #fff;
+      font-size: 0.3rem;
+      height: 100%;
+      background-image: url("../images/back_00.png");
+      background-position: 10px;
+      background-repeat: no-repeat;
+      background-size: 0.4rem;
+    }
+
+    h3 {
+      color: #fff;
+      font-size: 0.36rem;
+      text-align: center;
+      font-weight: normal;
+      height: 100%;
+    }
+  }
+  .pointBan {
+    height: 33%;
+    .option {
+      position: absolute;
+      top: 2rem;
+      left: 0.5rem;
+      color: #ffffff;
+
+      .p1 {
+        background-size: 15px;
+        background-image: url(../images/ip.png);
+        background-position: 0;
+        background-repeat: no-repeat;
+        padding: 4px 0 2px 20px;
+        margin-top: 0.24rem;
+      }
+      .p2 {
+        background-size: 13px;
+        background-image: url(../images/dis.png);
+        background-position: 0;
+        background-repeat: no-repeat;
+        padding-left: 20px;
+        margin-top: 2%;
+      }
+    }
+  }
+  .banner {
+    height: 95%;
+    //margin-bottom: 0.2rem;
+    border-bottom: 0.2rem solid #f1f1f1;
+    .bannerImg {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .pointCon {
+    height: 60%;
+    .nav_Bar {
+      width: 100%;
+      height: 19%;
+      .nav_ul {
+        padding: 8px 0;
+        border-top: 1px solid #cecece;
+        border-bottom: 1px solid #cecece;
+        .nav_li {
+          width: 32%;
+          text-align: center;
+          border-right: 1px solid #d0d0d0;
+          display: inline-block;
+          font-size: 0.26rem;
+          p {
+            color: #DB0025;
+            font-size: 0.26rem;
+            padding: 4px;
+          }
+        }
+        .nav_li:last-child {
+          border-right: none;
+        }
+      }
+    }
+    .point_foot {
+      padding: 4%;
+      height: 73%;
+      .foot_fl {
+        width: 100%;
+        height: 100%;
+        .foot_new {
+          width: 47%;
+          display: inline-block;
+          position: relative;
+          height: 100%;
+          img {
+            width:100%;
+            //height: 100%;
+          }
+          .san1 {
+            position: absolute;
+            top: 0.6rem;
+            left: 1rem;
+            width: 68px;
+            height: 66px;
+            line-height: 66px;
+            background-color: #ffffff;
+            text-align: center;
+            border-radius: 50%;
+            color: #DB0025;
+            font-size: 0.6rem;
+            font-weight: 600;
+          }
+          .ran_1 {
+            color: #ffffff;
+            position: absolute;
+            bottom: 1.5rem;
+            left: 0.6rem;
+            font-size: 0.3rem;
+            font-weight: 600;
+          }
+          .ran_2 {
+            color: #ffffff;
+            position: absolute;
+            bottom: 1.5rem;
+            left: 0.8rem;
+            font-size: 0.3rem;
+            font-weight: 600;
+          }
+          .san2 {
+            position: absolute;
+            top:0.6rem;
+            right:0.9rem;
+            width: 66px;
+            height: 64px;
+            line-height: 64px;
+            background-color: #ffffff;
+            text-align: center;
+            border-radius: 50%;
+            color: #DB0025;
+            font-size: 0.5rem;
+            font-weight: 600;
+          }
+        }
+        .foot_new:first-child {
+          padding-left: 3px;
+          margin-right: 3%;
+        }
+      }
+    }
+  }
+}

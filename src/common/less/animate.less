@@ -1,0 +1,27 @@
+/*淡入淡出动画*/
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 0.5s;
+}
+
+.fade-enter, .fade-leave-active {
+    opacity: 0;
+}
+
+.fade-enter-active .fade-leave {
+    opacity: 1;
+}
+
+/*向左淡入淡出动画*/
+.slideOutLeft-enter-active, .slideOutLeft-leave-active {
+    transition: ease-out 0.4s;
+}
+
+.slideOutLeft-enter, .slideOutLeft-leave-active {
+    opacity: 0;
+    transform: translate(0.4rem, 0) rotate(180deg);
+}
+
+.slideOutLeft-enter-active .slideOutLeft-leave {
+    opacity: 1;
+    transform: translate(0, 0)  rotate(0deg)
+}

@@ -1,0 +1,81 @@
+@import "../../../common/less/common";
+
+.userCenter {
+    .baseMes {
+        position: relative;
+
+        color: #fff;
+
+        .bg {
+            display: block;
+            width: 100%;
+        }
+
+        .userName {
+            position: absolute;
+            top: 0.5rem;
+            left: 0.4rem;
+        }
+    }
+
+    .list {
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        background-color: #fff;
+        padding-left: 0.3rem;
+        margin-top: 0.2rem;
+
+        .li {
+            position: relative;
+        }
+        li {
+            height: 1rem;
+            line-height: 1rem;
+            position: relative;
+            border-bottom: 1px solid #ddd;
+            font-size: 0.32rem;
+            padding-left: 0.1rem;
+            .li_box {
+                width: 94%;
+                display: inline-block;
+            }
+            .cor {
+                width: 10px;
+                height: 10px;
+                background-color: red;
+                border-radius: 50%;
+                display: inline-block;
+                position: absolute;
+                left: 24%;
+                top: 24%;
+            }
+        }
+
+        .fa-angle-right {
+            font-size: 0.5rem;
+            position: absolute;
+            height: 1rem;
+            line-height: 1rem;
+            color: #999;
+            right: 0.3rem;
+        }
+
+        li:last-child {
+            border: none;
+        }
+    }
+
+    .loginOut {
+        display: block;
+        width: 6.9rem;
+        height: 0.9rem;
+        line-height: 0.9rem;
+        text-align: center;
+        font-size: 0.36rem;
+        color: @mainColor;
+        border-radius: 0.1rem;
+        border: 1px solid #ddd;
+        margin: 1rem auto;
+        background-color: #fff;
+    }
+}

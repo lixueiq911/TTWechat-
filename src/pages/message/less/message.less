@@ -1,0 +1,61 @@
+@import "../../../common/less/mixin";
+
+.message {
+    .messageList {
+        position: absolute;
+        width: 100%;
+        top: 0.9rem;
+        left: 0;
+        bottom: 0;
+    }
+
+    .list {
+        margin-top: 0.2rem;
+        background-color: #fff;
+
+        li {
+            position: relative;
+            padding: 0.2rem 0.3rem 0.2rem 0.5rem;
+            border-bottom: 1px solid #ddd;
+            height: 1rem;
+        }
+
+        .readState {
+            position: absolute;
+            width: 0.2rem;
+            height: 0.2rem;
+            background-color: #217AFF;
+            top: 0.6rem;
+            left: 0.15rem;
+            border-radius: 50%;
+        }
+
+        .title {
+            position: relative;
+            line-height: 0.5rem;
+
+            h3 {
+                font-size: 0.32rem;
+                font-weight: bold;
+            }
+
+            .time {
+                position: absolute;
+                top: 0;
+                right: 0;
+                font-size: 0.22rem;
+                color: #999;
+            }
+        }
+
+        .content {
+            line-height: 0.5rem;
+            font-size: 0.26rem;
+            .ellipsisNormal();
+        }
+
+        li:last-child {
+            border: none;
+        }
+    }
+}
